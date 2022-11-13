@@ -14,20 +14,19 @@ internal class Program
 
         //Chose.Language();
 
-        var firstArmy = Chose.UnitsArmy(1);
-        Prints.UnitAllInformation(firstArmy!);
-        var secondArmy = Chose.UnitsArmy(2);
-
-        Army aa = new Army();
-        aa.Name = StringsMenu.GetString("RedArmy");
-        aa.UnitList.Add( firstArmy);
-        var aaa = aa.UnitList;
-        (Unit, Unit) twoArmy = (firstArmy, secondArmy)!;
-
+        var firstArmy = new Army();
+        firstArmy.Name = StringsMenu.GetString("RedArmy");
+        firstArmy.UnitList.Add( Chose.UnitsArmy(1)!);
+        Prints.UnitAllInformation(firstArmy.UnitList.First());
+        var secondArmy = new Army();
+        firstArmy.Name = StringsMenu.GetString("GreenArmy");
+        secondArmy.UnitList.Add(Chose.UnitsArmy(2)!);
+        
+        (Unit, Unit) twoArmy = (firstArmy.UnitList.First(), secondArmy.UnitList.First());
         Prints.TwoArmy(twoArmy);
         Console.WriteLine(StringsMenu.GetString("BattleBegin"));
         Console.ReadLine();
-        Battle.Attack(firstArmy!, secondArmy!);
+        Battle.Attack(firstArmy.UnitList.First(), secondArmy.UnitList.First());
         Prints.TwoArmy(twoArmy);
 
     }
