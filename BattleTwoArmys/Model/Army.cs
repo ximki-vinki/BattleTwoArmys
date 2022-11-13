@@ -11,6 +11,6 @@ namespace BattleTwoArmys.Model
     {
         public string Name { get; set; } = null!;
 
-        public List<Unit> UnitList { get; set; } = null!;
+        public List<Unit> UnitList { get; set; } = new();
     }
 }

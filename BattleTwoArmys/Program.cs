@@ -18,7 +18,10 @@ internal class Program
         Prints.UnitAllInformation(firstArmy!);
         var secondArmy = Chose.UnitsArmy(2);
 
-
+        Army aa = new Army();
+        aa.Name = StringsMenu.GetString("RedArmy");
+        aa.UnitList.Add( firstArmy);
+        var aaa = aa.UnitList;
         (Unit, Unit) twoArmy = (firstArmy, secondArmy)!;
 
         Prints.TwoArmy(twoArmy);

@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-using System.Reflection.Metadata;
-using BattleTwoArmys.Base;
+﻿using BattleTwoArmys.Base;
 using BattleTwoArmys.ViewModel;
 
 namespace BattleTwoArmys.Model
@@ -36,8 +34,7 @@ namespace BattleTwoArmys.Model
     class Hero : Unit
     {
         public override string Name => StringsUnits.GetString("Hero");
-
-
+        
         public Hero()
         {
             HitPoint = 20;
