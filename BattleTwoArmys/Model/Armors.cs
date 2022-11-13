@@ -1,22 +1,21 @@
 ﻿using BattleTwoArmys.Base;
 
-namespace BattleTwoArmys.Model
-{
-     class ArmorLight : Armor
-    {
-        protected internal ArmorLight()
-        {
-            Name = "Light Armor";
-            Defense = 5;
-        }
-    }
+namespace BattleTwoArmys.Model;
 
-    class ArmorHero : Armor
+internal class ArmorLight : Armor
+{
+    protected internal ArmorLight()
     {
-        public ArmorHero()
-        {
-            Name = "Hero Armor";
-            Defense = 15;
-        }
+        Name = "Light Armor";
+        Defense = 5;
+    }
+}
+
+internal class ArmorHero : Armor
+{
+    public ArmorHero()
+    {
+        Name = "Hero Armor";
+        Defense = 15;
     }
 }

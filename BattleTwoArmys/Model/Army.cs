@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BattleTwoArmys.Base;
+﻿using BattleTwoArmys.Base;
 
-namespace BattleTwoArmys.Model
+namespace BattleTwoArmys.Model;
+
+public class Army
 {
-    internal class Army
-    {
-        public string Name { get; set; } = null!;
+    public string Name { get; set; } = null!;
 
-        public List<Unit> UnitList { get; set; } = new();
-    }
+    public List<Unit> UnitList { get; set; } = new();
 }
